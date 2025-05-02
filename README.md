@@ -1,41 +1,60 @@
-📦 Inventory Utilities
-A collection of small but essential Google Apps Script tools designed to support the Inventory Management System by handling edge cases and operational cleanups.
+# Inventory Utilities
 
-These utilities are intended to assist warehouse managers and inventory administrators in keeping data clean and actionable without manual corrections.
+A collection of essential Google Apps Script tools to maintain clean, reliable inventory data.  
+These utilities support the broader Inventory Management System by handling negative quantities, technician removals, and audit logging.
 
-🛠️ Features
-🔹 Replace Negative Quantities
-Automatically replaces negative stock quantities with zero in both the Database and Location-Based Inventory sheets.
+---
 
-🔹 Remove Fired Technicians
-Batch removal of technicians or specific items that should no longer appear across any sheets. Fully customizable list of names.
+## 📦 Features
 
-🔹 Log Negative Quantities
-Scans the Database sheet and logs any negative quantities into a separate sheet for audit and review.
+- **Replace Negative Quantities**
+  - Automatically sets negative stock levels to zero in both the `Database` and `Location-Based Inventory` sheets.
 
-📌 Use Cases
-Maintain clean inventory records and avoid calculation errors caused by negative stock.
+- **Remove Fired Technicians**
+  - Batch-removes fired or obsolete technicians from all sheets using a customizable list.
 
-Remove obsolete or inactive technicians from active records.
+- **Log Negative Quantities**
+  - Scans inventory sheets and logs any negative quantities to a dedicated audit sheet for review.
 
-Track and review situations where stock levels went negative (for audit or root cause analysis).
+---
 
-🚀 How to Use
+## 📌 Use Cases
+
+- Maintain data accuracy by eliminating negative stock.
+- Clean technician lists when employees leave.
+- Identify and investigate inventory issues from negative quantities.
+
+---
+
+## 🚀 How to Use
+
 Each utility is callable as a Google Apps Script function:
 
-replaceNegativeQuantities() → Run to zero out negative stock.
+| Function | Purpose |
+|----------|---------|
+| `replaceNegativeQuantities()` | Set negative stock to zero across key sheets. |
+| `removeFiredTechs()` | Remove entries matching a customizable list of fired technicians. |
+| `logNegativeQuantities()` | Log any negative quantities found into an audit sheet. |
 
-removeFiredTechs() → Run after updating fired tech list.
+---
 
-logNegativeQuantities() → Run to log and review negative stock occurrences.
+## 🔧 Technologies
 
-📈 Future Roadmap (optional)
-Add configuration sheet for fired techs (instead of hardcoded array).
+- Google Sheets
+- Google Apps Script
 
-Schedule scripts to run automatically as nightly or weekly maintenance jobs.
+---
 
-📎 Technologies
-Google Apps Script
+## 📈 Future Roadmap
 
-Google Sheets
+- Add configuration sheet for dynamic technician removal (instead of hardcoding).
+- Schedule utilities to run automatically as part of system maintenance.
 
+---
+
+## 📬 Contact
+
+Created and maintained by Mason Hotaling.  
+For more projects, view my [portfolio](https://maswindo.github.io/).
+
+---
